@@ -1,0 +1,16 @@
+<!-- store/templates/store/buyer_confirm_delete.html -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Delete Product</title>
+</head>
+<body>
+    <h1>Delete Product</h1>
+    <p>Are you sure you want to delete {{ product.pname }}?</p>
+    <p><img style="height:250px ; width:350px;" src="{{product.pimage.url}} " class="img-fluid"></p>
+    <form method="post">
+        {% csrf_token %}
+        <button type="submit">Confirm</button>
+    </form>
+</body>
+</html>
